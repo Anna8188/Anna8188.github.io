@@ -14,6 +14,7 @@ button.addEventListener("click", function () {
     })
     .then((data) => {
       getData(data);
+      console.log(data);
     });
 
   function getData(data) {
@@ -22,7 +23,8 @@ button.addEventListener("click", function () {
     capital.innerHTML = "Capital | " + data.map((item) => item.capital[0]);
     population.innerHTML =
       "Population | " + data.map((item) => item.population);
-    area.innerHTML = "Area | " + data.map((item) => item.area);
+    area.innerHTML =
+      "Area | " + data.map((item) => item.area) + "  km <sup> 2 </sup>";
     language.innerHTML =
       "Language | " + data.map((item) => Object.values(item.languages)[0]);
   }
